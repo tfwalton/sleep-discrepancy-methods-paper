@@ -996,7 +996,7 @@ wireframe(pred.z~TST_diary + TST_acti, G,
 
 \noindent_Note._ In the ratio regression plot we can observe insomnia severity is maximised where objective sleep most exceeds self-report sleep, with a sharp non-linear decline across the y axis until the figure moves beyond the boundary of positive z values. 
 
-The non-linear functional form implied by a ratio score regression may reflect a discrepancy effect (as seen in Figure \@ref(fig:ratio-plot), but the coefficient weightings are unlikely to be supported empirically and are very difficult to interpret or define a priori (i.e., for a hypothesis).
+The non-linear functional form implied by a ratio score regression may reflect a discrepancy effect (as seen in Figure \@ref(fig:ratio-plot)), but the coefficient weightings are unlikely to be supported empirically and are very difficult to interpret or define a priori (i.e., for a hypothesis).
 
 An alternative example can be provided by expressing the ratio in exponential terms:
 
