@@ -92,19 +92,19 @@ The use of derived indices in sleep discrepancy research is associated with subs
 
 Sleep discrepancy, sometimes referred to as subjective-objective sleep discrepancy or sleep misperception, is the discordance between self-report and objective measures of sleep. Sleep discrepancy can be considered a spectrum ranging from negative (where self-report sleep exceeds objective sleep) to positive (where objective sleep exceeds self-report sleep). Negative sleep discrepancy is commonly observed in insomnia, where measures such as total sleep time (TST) and wake after sleep onset (WASO) tend to be under-and overestimated by affected individuals, respectively, in comparison with objective recordings [@edinger1995; @manconi2010; @fernandez-mendoza2011]. This phenomenon plays a central role in many theories of insomnia. For example, individuals who underestimate their sleep may spend more time in bed to compensate for this perceived lack, increasing sleep fragmentation (as the homoeostatic drive for sleep remains constant), and subsequently anxiety and arousal at sleep [@harvey2002]. Positive sleep discrepancy has been less investigated although healthy adults can modestly overestimate their sleep [@mercer2002] and positive sleep discrepancy in its more extreme forms may be related to dementia [@most2012].
 
-Many past studies have aimed to investigate the relationship of sleep discrepancy with another construct. This is most commonly achieved by deriving an index such as a difference score (e.g., self-report TST -- objective TST) and adding this as a dependent or independent variable in linear regression-based analyses [Chapter 2\; @walton2025]. Whilst this is a convenient strategy with intuitive appeal, the use of derived indices in such a way is associated with a range of conceptual and methodological problems [Chapter 3\; @cronbach1970; @edwards1994; @griffin1999; @kronmal1993; @wittenborn1951]. These problems are substantive and inferences made on the basis of derived indices may be misleading or incorrect. Using real sleep data, we provide an in-depth treatment of problems with derived indices in the context of sleep discrepancy research. The following section describes the data and and methods for its collection. We then introduce derived indices and enumerate the specific problems associated with each. Finally, we explore alternative strategies that can be employed to address the issues posed by derived indices.
+Many past studies have aimed to investigate the relationship of sleep discrepancy with another construct. This is most commonly achieved by deriving an index such as a difference score (e.g., self-report TST -- objective TST) and adding this as a dependent or independent variable in linear regression-based analyses [@walton2025]. Whilst this is a convenient strategy with intuitive appeal, the use of derived indices in such a way is associated with a range of conceptual and methodological problems [@cronbach1970; @edwards1994; @griffin1999; @kronmal1993; @wittenborn1951]. These problems are substantive and inferences made on the basis of derived indices may be misleading or incorrect. Using real sleep data, we provide an in-depth treatment of problems with derived indices in the context of sleep discrepancy research. The following section describes the data and and methods for its collection. We then introduce derived indices and enumerate the specific problems associated with each. Finally, we explore alternative strategies that can be employed to address the issues posed by derived indices.
 
 # Data and methods
 
 Data for empirical demonstrations were obtained from the Healthy Ageing Research Program, a longitudinal study of cognition in ageing, based in Perth, Western Australia. Community-dwelling older adults (N = 230; aged 50+) completed cognitive testing, clinical and demographic questionnaires, and a week of sleep measurement between 2014 to 2018. Objective sleep was recorded with Actigraphy (Tri-axial wGT3X-BT activity monitor; Actigraph LLC, Pensacola, FL). Scoring was performed with the Cole-Kripke algorithm in Acti-life software (version 6.11.8) using 60-second epochs. Estimates of TST were provided automatically by the software. Self-report sleep was measured with the Consensus Sleep Diary [CSD\; @carney2012]. Estimates of self-report TST were calculated by subtracting wake after sleep onset (WASO) and sleep onset latency (SOL) from sleep period time (SPT). SPT was defined as the length of time between a participant's bedtime and their final awakening. The Insomnia Severity Index [ISI\; @bastien2001] was used as an outcome variable for all empirical demonstrations. The ISI is a 7-item scale querying the presence of insomnia symptoms over the past 2-week period and was administered prior to sleep measurements alongside a range of other questionnaires. The study was approved by the UWA Human Research Ethics Committee (RA/4/1/536).
 
-Note there are some methodological considerations for this data that affect its suitability for scientific inference. Consequently findings should be interpreted as demonstrations only. Firstly, data were aggregated across nights and testing visits, ignoring the correlation of errors within individuals. Standard errors will be underestimated as a result and statistical power will be affected. As the demonstrations compare different statistical approaches to the same data, this is not expected to affect the strength of our conclusions. Secondly, actigraphy bed and rise times were defined using diary estimates of the same, with highly discrepant (>60 minute) sleep periods inspected and scored visually according to the Society of Behavioural Sleep Medicine [SBSM\; @ancoli2015]. Using self-report measures for definition of objective sleep parameters is inappropriate for sleep discrepancy research and artificially reduces the discordance between self-report and objective measures [Chapter 2\; @walton2025].
+Note there are some methodological considerations for this data that affect its suitability for scientific inference. Consequently findings should be interpreted as demonstrations only. Firstly, data were aggregated across nights and testing visits, ignoring the correlation of errors within individuals. Standard errors will be underestimated as a result and statistical power will be affected. As the demonstrations compare different statistical approaches to the same data, this is not expected to affect the strength of our conclusions. Secondly, actigraphy bed and rise times were defined using diary estimates of the same, with highly discrepant (>60 minute) sleep periods inspected and scored visually according to the Society of Behavioural Sleep Medicine [SBSM\; @ancoli2015]. Using self-report measures for definition of objective sleep parameters is, in most cases, likely to be inappropriate for sleep discrepancy research and artificially reduces the discordance between self-report and objective measures [@walton2025].
 
-This manuscript, including all statistical analyses, tables, and figures was generated using computationally reproducible methods [@piccolo2016; @lindsay2023] in `r R.version.string` [@r] with R Studio [@rstudio] and R Markdown [@rmarkdown]. Packages included tidyverse [@tidyverse], bookdown [@bookdown], knitr [@knitr], kableExtra [@kableextra], restriktor [@restriktor], segmented [@segmented], ggplot2 [@wickham2016], and DiagrammeR [@diagrammer]. Code is available through the Github repository https://github.com/tfwalton/sleep-discrepancy-methods-short.
+This manuscript, including all statistical analyses, tables, and figures was generated using computationally reproducible methods [@piccolo2016; @lindsay2023] in `r R.version.string` [@r] with R Studio [@rstudio] and R Markdown [@rmarkdown]. Packages included tidyverse [@tidyverse], bookdown [@bookdown], knitr [@knitr], kableExtra [@kableextra], restriktor [@restriktor], segmented [@segmented], ggplot2 [@wickham2016], and DiagrammeR [@diagrammer]. Code is available through the Github repository https://github.com/tfwalton/sleep-discrepancy-methods-paper.
 
 # Introduction to derived indices
 
-There are three principal categories of quantitative sleep discrepancy indices: difference scores, ratio scores, and combination scores that incorporate both differences and ratios. A simple algebraic difference score, such as that formed by subtracting self-report total sleep time (TST) from objective TST, is the most common sleep discrepancy index [Chapter 2\; @walton2025]
+There are three principal categories of quantitative sleep discrepancy indices: difference scores, ratio scores, and combination scores that incorporate both differences and ratios. A simple algebraic difference score, such as that formed by subtracting self-report total sleep time (TST) from objective TST, is the most common sleep discrepancy index [@walton2025]
 
 \begin{equation}
 dTST = sTST - oTST
@@ -122,7 +122,7 @@ absTST = |sTST - oTST|
 
 Unlike simple algebraic difference scores, absolute difference scores operationalise positive and negative discrepancy as the same quantity.
 
-The most common ratio score used in sleep discrepancy research is that formed by the division of sTST by oTST, expressed as a percentage [Chapter 2\; @walton2025]:
+The most common ratio score used in sleep discrepancy research is that formed by the division of sTST by oTST, expressed as a percentage [@walton2025]:
 
 \begin{equation}
 rTST = \frac{sTST}{oTST}*100
@@ -439,9 +439,9 @@ The piecewise regression estimates for the slopes to the left and right of the b
 
 ### Implicit weighting of difference score components
 
-The second major problem with difference scores is less obvious though just as critical. Difference scores hold implicit weightings on the contributions of their component variables to observed relationships, that (i) rarely make theoretical sense and, (ii) often reduce the variance in predicted values that can be accounted for by a model [@edwards2002].
+The second major problem with difference scores is less obvious though just as critical. Difference scores hold implicit weightings on the contributions of their component variables to observed relationships, that rarely make theoretical sense and, as noted by @edwards2002, often reduce the variance in predicted values that can be accounted for by a model.
 
-Expansion of the dTST term in the regession of predicted ISI values provides
+Following the arguments provided by @edwards2002, expansion of the dTST term in the regression of predicted ISI values provides
 
 \begin{equation}
 ISI = b_{0}+b_{1}({sTST-oTST}) + \epsilon
@@ -636,21 +636,21 @@ The problem of directionality applies to absolute difference scores yet in a dif
 
 ### Implicit weightings of difference score components
 
-Absolute difference scores impose implicit weightings on coefficients that represent the symmetry introduced in the previous paragraph, in addition to constraints analogous to that of simple algebraic difference scores. @edwards2002 provides demonstrations in equation form by using a dummy variable (W) in a piecewise regression^[Note. This dummy variable approach to piece-wise regression is distinct to the approach used to demonstrate directionality problems with difference scores. The dummy variable sets the breakpoint at sTST = oTST which optimally should be estimated empirically. Unfortunately, methods for estimating breakpoints empirically across two or more linear combinations of predictors do not appear to be presently available in R.]. In the case of insomnia and sleep discrepancy W is equal to 0 when e.g., $sTST > oTST$, and 1 when $sTST \le oTST$.
+Absolute difference scores impose implicit weightings on coefficients that represent the symmetry introduced in the previous paragraph, in addition to constraints analogous to that of simple algebraic difference scores. @edwards2002 demonstrates this issue using a dummy variable (W) in a piecewise regression^[Note. This dummy variable approach to piece-wise regression is distinct to the approach used to demonstrate directionality problems with difference scores. The dummy variable sets the breakpoint at sTST = oTST which optimally should be estimated empirically. Unfortunately, methods for estimating breakpoints empirically across two or more linear combinations of predictors do not appear to be presently available in R.]. In the case of insomnia and sleep discrepancy, W is equal to 0 when e.g., $sTST > oTST$, and 1 when $sTST \le oTST$. Following from the demonstrations provided by @edwards2002:
 
 \begin{equation}
 ISI = b_{0} + b_{1} (1 - 2W)(sTST - oTST) + \epsilon
 (\#eq:absolute)
 \end{equation}
 
-For positive (and no) sleep discrepancy the term (1 - 2W) will equal 1 and for negative sleep discrepancy it will equal -1, effectively reversing the sign of $sTST - oTST$. Equation \@ref(eq:absolute) can be expanded to provide
+For positive (and no) sleep discrepancy the term (1 - 2W) will equal 1 and for negative sleep discrepancy it will equal -1, effectively reversing the sign of $sTST - oTST$. Continuing to follow @edwards2002, Equation \@ref(eq:absolute) can be expanded to provide
 
 \begin{equation}
 ISI = b_{0} + b_{1}sTST - b_{1}oTST - 2b_{1}W sTST + 2b_{1}W oTST + \epsilon
 (\#eq:absolute2)
 \end{equation}
 
-The weightings applied to the coefficients in \@ref(eq:absolute2) can be made explicit with comparison to the following unconstrained piecewise linear equation containing sTST and oTST as separate predictors.
+The weightings applied to the coefficients in \@ref(eq:absolute2) can be made explicit with comparison to the following unconstrained piecewise linear equation containing sTST and oTST as separate predictors [@edwards2002]:
 
 \begin{equation}
 ISI = b_{0} + b_{1}sTST + b_{2}oTST + b_{3}W + b_{4}W sTST + b_{5}W oTST + \epsilon
