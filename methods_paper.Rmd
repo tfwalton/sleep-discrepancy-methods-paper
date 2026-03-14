@@ -2,6 +2,8 @@
 title: "On the use of difference and ratio scores in sleep discrepancy research"
 header-includes:
 -   \usepackage{float} \floatplacement{figure}{H}
+-   \usepackage{setspace} \doublespacing
+
 author:
   - Tom F. Walton:
       institute: [UWA]
@@ -26,6 +28,9 @@ output:
 bibliography: references.bib
 csl: apa.csl
 ---
+
+\setlength{\parindent}{.5in}
+\setlength{\parskip}{0pt}
 
 ``` {r initial3, echo = FALSE, warning = FALSE, message = FALSE}
 
