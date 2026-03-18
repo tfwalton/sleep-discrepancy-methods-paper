@@ -15,7 +15,7 @@ institute:
   - UWA: School of Psychological Science, The University of Western Australia
   - POP: School of Population and Global Health, The University of Western Australia
   - CH: Office of the Deputy Vice Chancellor, Research, The University of Western Australia
-date: "2023-09-04"
+date: "2026-03-16"
 output:
   bookdown::pdf_document2:
     latex_engine: xelatex
@@ -48,10 +48,11 @@ library("lattice")
 library("DiagrammeR")
 
 # Set default code chunk options
+opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE, fig.path = "")
 
 # Install package of personal functions
+
 #install_github("tfwalton/rfunctions", ref = "main")
-opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
 library(pslformat)
 
 screen <- read.csv("https://raw.githubusercontent.com/tfwalton/sleep-discrepancy-review/refs/heads/main/review_data.csv")
@@ -78,6 +79,8 @@ colpal <- c("#A50026", "#D73027", "#F46D43", "#FDAE61",
 
 
 ```
+
+\noindent Corresponding author: Melissa J. Ree (Melissa.Ree@uwa.edu.au).
 
 # Abstract
 
