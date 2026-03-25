@@ -15,7 +15,7 @@ institute:
   - UWA: School of Psychological Science, The University of Western Australia
   - POP: School of Population and Global Health, The University of Western Australia
   - CH: Office of the Deputy Vice Chancellor, Research, The University of Western Australia
-date: "2026-03-16"
+date: "2026-03-25"
 output:
   bookdown::pdf_document2:
     latex_engine: xelatex
@@ -77,6 +77,9 @@ colpal <- c("#A50026", "#D73027", "#F46D43", "#FDAE61",
          "#FEE08B", "#FFFFBF", "#D9EF8B", "#A6D96A", 
          "#66BD63", "#1A9850", "#006837", "#0e6a6b", "#1549b0", "#0c1578") %>% rev()
 
+
+# Read data (local)
+harp <- read.csv("harp-long.csv")
 
 ```
 
@@ -285,9 +288,6 @@ We can demonstrate the directionality problem, in isolation of other problems, e
 
 ```{r prepare}
 #-------------- Prepare data for upcoming empirical demonstrations -------------
-
-# Read csv harp file
-harp <- read.csv("harp-long.csv")
 
 # Remove annoying .0000000 from the end of time values
 harp$Diary_Q6 <- sub("\\.000000$","", harp$Diary_Q6)
