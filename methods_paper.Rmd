@@ -1400,7 +1400,23 @@ The only substantive differences between these two cases is the replacement of t
 
 \newpage
 
-# Data availability
-This including all statistical analyses, tables, and figures was generated using computationally reproducible methods are available from Github https://github.com/tfwalton/sleep-discrepancy-methods-paper. 
+# Data availability statement
+This computationally-reproducible R Markdown manuscript is available from Github (https://github.com/tfwalton/sleep-discrepancy-methods-paper) and includes all statistical analyses, tables, figures, and text. Data are available upon request from the corresponding author, subject to ethical and privacy considerations.
+
+# Acknowledgements
+
+We would like to acknowledge the participants in the Healthy Ageing Research Project (HARP) for the time and effort they have contributed to the research project. We would also like to recognise the contributions of Honours and Postgraduate students who have been involved in the data collection process.
+
+# Financial disclosure statement
+
+None.
+
+# Funding
+
+This work forms part of PhD project funded by the Australian Government Research Training Program.
+
+# Declaration of competing interest
+
+The authors declared that they had no conflicts of interest with respect to their authorship or the publication of this article.
 
 # References
