@@ -85,6 +85,8 @@ harp <- read.csv("harp-long.csv")
 
 \noindent Corresponding author: Melissa J. Ree (Melissa.Ree@uwa.edu.au).
 
+\newpage
+
 # Abstract
 
 ## Introduction
@@ -1413,9 +1415,9 @@ None.
 
 # Funding
 
-This work forms part of PhD project funded by the Australian Government Research Training Program.
+This research was supported by the Commonwealth through an Australian Government Research Training Program Scholarship (DOI: https://doi.org/10.82133/C42F-K220).
 
-# Declaration of competing interest
+# Declaration of competing interests
 
 The authors declared that they had no conflicts of interest with respect to their authorship or the publication of this article.
 
