@@ -1400,4 +1400,7 @@ The only substantive differences between these two cases is the replacement of t
 
 \newpage
 
+# Data availability
+This including all statistical analyses, tables, and figures was generated using computationally reproducible methods are available from Github https://github.com/tfwalton/sleep-discrepancy-methods-paper. 
+
 # References
