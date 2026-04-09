@@ -1175,17 +1175,13 @@ In all discussions provided above, self-report and objective TST and the insomni
 
 Categorising difference scores into groups based on their values is a common strategy in the sleep discrepancy literature [@walton2025]. For example, participants may be assigned membership to an "underestimator" category if their dTST is below 50, an "overestimator" category if their dTST is over 50, and a "normal estimator" category if their dTST is between the prior two values, with an ANOVA conducted to test differences in means for some outcome. This strategy can address issues with directionality when enough categories are specified [@aiken1991]. Unfortunately, however, categorising continuous measures results in a reduction in statistical power that can be substantial [@edwards2001]. An additional problem is introduced by the decision of where to place the cut-points for group membership, which, without support of theory or the data itself, is arbitrary.
 
-<!-- An alternative approach used in sleep discrepancy research consists in defining a group of "sleep misperceptors" with a complex set of criteria e.g., sleep efficiency < 75%, sTST < 6 hours, oTST > 7 hours.  -->
-
 ## Subgroup analyses
 
-Another potential solution to the directionality problem is to retain analyses for continuous variables (i.e., regression) but run these separately for derived index-defined groups (e.g., "overestimators" and "underestimators"). As discussed earlier in the section introducing the directionality problem, this approach risks determining groups arbitrarily rather than empirically. Additionally, statistical power is reduced through splitting of the sample, inference is complicated by multiple comparisons, and problems of implicit coefficient weights persist.
-
-<!-- This approach was outlined above in the paragraph introducing the directionality problem, and the issue knowing where to split the sample was raised as rationale for estimating piece-wise regression breakpoints, empirically. However, if separate analyses are conducted on difference scores (e.g., either side of dTST = 0), problems of implicit coefficient weights remain and statistical power is reduced through the splitting of the sample. The decision of where to split the sample, too, remains arbitrary, and ideally should be tested for empirically. -->
+Another potential solution to the directionality problem is to leave variables continuous, but run analyses separately for derived index-defined groups (e.g., "overestimators" and "underestimators"). As discussed earlier, in the section introducing the directionality problem, this approach assumes that the relationship between the derived index components and the outcome changes at the chosen cut-point (usually where the components are equal). This is an assumption that should, ideally, be tested empirically. Sub-group regression also results in reduced statistical power through diminished sample sizes and cannot resolve the problem of implicit coefficient weights. Fortunately, @edwards1995 introduced an approach using multivariate regression that addresses these latter two issues. This approach will be discussed in a following paragraph.
 
 ## Latent difference score modelling
 
-Approaches based in structural equation modelling have been introduced as alternatives to regression using derived indices. These include @cheung2009's Latent Congruence Model or the procedure described by @mcardle2009. These techniques involve higher order latent factors with specified factor loadings used to represent the mean of the components of a difference score, and their arithmetic difference. Advantages of SEM-based approaches include the ability to account for measurement error, assess for measurement invariance, and specify models flexibly (e.g., define discrepancy as an antecedent, consequent, mediator, moderator etc...). Unfortunately, latent difference score approaches reintroduce the problems with traditional difference score regressions described above [@edwards2009].  
+Approaches based in structural equation modelling have been introduced as alternatives to regression using derived indices. These include @cheung2009's Latent Congruence Model or the procedure described by @mcardle2009. These techniques involve higher order latent factors with specified factor loadings used to represent the mean of the components of a difference score, and their arithmetic difference. Advantages of SEM-based approaches include the ability to account for measurement error, assess for measurement invariance, and specify models flexibly (e.g., define discrepancy as an antecedent, consequent, mediator, moderator etc...). Unfortunately, latent difference score approaches reintroduce the problems with traditional difference score regressions described above, constraining coefficient weights and reducing necessary dimensions [@edwards2009].
 
 <!-- The first two advantages may not be as applicable for sleep time discrepancy as in, for example, individual differences research, but the flexibility of SEM could prove extremely useful for theory building in this area. For example, latent difference scores can be specified as antecedents or consequents in relation to any number of latent or observed variables.  -->
 
@@ -1193,7 +1189,7 @@ Approaches based in structural equation modelling have been introduced as altern
 
 ## The additive model and condition-based regression analysis
 
-The additive model, composed of a regression with sTST and oTST as separate linear predictors, was demonstrated in a previous example and provided more information than the accompanying difference score regression. If a researcher is interested in measuring a relationship of discrepancy to an outcome that is linear across all levels of self-report and objective sleep (i.e., a directed difference) then this approach may be useful. Support for a discrepancy hypothesis could be provided by observing statistically significant unique contributions of each sleep measure that are opposite in sign. As a test of directed difference, however, this approach would not be appropriate for a hypothesis where the effect of discrepancy changes at any value of the predictors. @humberg2018 devised a formal method for assessing coefficients in the additive model for adherence to the coefficient pattern consistent with directed discrepancy described above. This procedure, called condition-based regression analysis, is simple in approach, and has the advantage of combining coefficient tests into a single hypothesis test.
+The additive model, composed of a regression with sTST and oTST as separate linear predictors, was demonstrated in a previous example and provided more information than the accompanying difference score regression. If a researcher is interested in measuring a relationship of discrepancy to an outcome that is linear across all levels of self-report and objective sleep (i.e., a directed difference) then this approach may be useful. Support for a discrepancy hypothesis could be provided by observing statistically significant unique contributions of each sleep measure that are opposite in sign. As a test of directed difference, however, this approach would not be appropriate for a hypothesis where the effect of discrepancy changes at any value of the predictors. @humberg2018 devised a formal method for assessing coefficients in the additive model for adherence to the coefficient pattern consistent with directed discrepancy described above. This procedure, called condition-based regression analysis, is simple in approach, and has the advantage of combining coefficient tests into a single hypothesis test. Where discrepancy is intended as an outcome composed of dependent, rather than independent variables, 
 
 ## Spline regression
 
@@ -1280,8 +1276,7 @@ node[shape = square, fontsize = 14]
 edge[fontsize = 14]
 
       DepIndep [label = 'Discrepancy as independent \n or dependent variable?']
-      LinearDep [label = 'Linear effect\n across spectrum of IV \n (i.e. directed difference)?']
-      Linear [label = 'Linear effect\n across spectrum of IV \n (i.e. directed difference)?']
+      Linear [label = 'Directed / non-directed difference']
       Weights [label = 'Specified coefficient \n weights?']
       Symmetric [label = 'Symmetric effect?']
       Constrained [label = 'Multiple regression \n testing constraints \n (Edwards 1994)', fontcolor = blue]
@@ -1291,23 +1286,22 @@ edge[fontsize = 14]
       Spline [label = 'Spline regression \n (Edwards & Parry 2018)', fontcolor = blue]
       Curvilinear [label = 'Differentiable \n (i.e., smooth) \n point of inflection']
 
-       Latent [label = 'Latent difference \n score modelling \n (Cheung, 2009); \n \n Multivariate regression \n with hypothesis testing \n (Edwards, 1995)', fontcolor = blue]
+       Latent [label = 'Multivariate regression \n with hypothesis testing \n (Edwards, 1995)', fontcolor = blue]
        Multivariate [label = 'Multivariate regression \n with hypothesis testing \n (Edwards, 1995)', fontcolor = blue]
 
 DepIndep -> Linear [label = 'IV']
-DepIndep -> LinearDep [label = 'DV']
-Linear -> Weights [label = 'Yes']
-Linear -> Curvilinear [label = 'No']
-Curvilinear -> Symmetric [label = 'Yes']
-Curvilinear -> Spline [label = 'No']
+DepIndep -> Multivariate [label = 'DV']
+Linear -> Weights [label = 'Directed difference']
+Linear -> Curvilinear [label = 'Non-directed difference']
+Curvilinear -> Symmetric [label = 'Yes (Curvilinear)']
+Curvilinear -> Spline [label = 'No (Linear)']
 
 Weights -> Constrained [label = 'Yes']
 Weights -> Condition [label = 'No']
 Symmetric -> Quadratic [label = 'Yes']
 Symmetric -> Cubic [label = 'No']
 
-LinearDep -> Latent [label = 'Yes']
-LinearDep -> Multivariate [label = 'No']
+
 
 }
 ")
