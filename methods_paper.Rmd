@@ -1167,9 +1167,9 @@ More broadly, sleep discrepancy, defined as the discordance between self-report 
 
 There is a range of approaches that aim to mitigate or resolve the problems with derived indices discussed in the above paragraphs. These strategies are introduced briefly below with a discussion for their appropriateness for the investigation of sleep discrepancy.
 
-## A note about directed versus non-directed difference
+## A note about directional versus non-directional difference
 
-In all discussions provided above, self-report and objective TST and the insomnia severity index (ISI) were used as examples. There may be cases for which an outcome is expected to be related linearly across all levels of a self-report and objective sleep variable. For example, sleep onset latency (SOL), by some objective definitions, is rarely underestimated [@hermans2020onset; @saline2016] and sleep discrepancy on this metric could be expected to correspond to increasing insomnia symptom severity linearly throughout its entire observed range. This directional form of discrepancy has been referred to as "directed difference" to contrast with the more complex discrepancy i.e., "non-directed difference" that may see an effect change throughout the range of self-report or objective sleep @schonbrodt2016. Accordingly, the directionality problem explained in the preceding sections is a result of applying a directed difference approach where non-directed difference would be more appropriate.
+In all discussions provided above, self-report and objective TST and the insomnia severity index (ISI) were used as examples. There may be cases for which an outcome is expected to be related linearly across all levels of a self-report and objective sleep variable. For example, sleep onset latency (SOL), by some objective definitions, is rarely underestimated [@hermans2020onset; @saline2016] and sleep discrepancy on this metric could be expected to correspond to increasing insomnia symptom severity linearly throughout its entire observed range. This form of discrepancy has been referred to as "directional difference" to contrast with the more complex discrepancy i.e., "non-directional difference" that may see an effect change throughout the range of self-report or objective sleep @schonbrodt2016. Accordingly, the directionality problem explained in the preceding sections is a result of applying a directional difference approach where non-directional difference would be more appropriate.
  
 ## Categorising difference scores
 
@@ -1177,7 +1177,7 @@ Categorising difference scores into groups based on their values is a common str
 
 ## Subgroup analyses
 
-Another potential solution to the directionality problem is to leave variables continuous, but run analyses separately for derived index-defined groups (e.g., "overestimators" and "underestimators"). As discussed earlier, in the section introducing the directionality problem, this approach assumes that the relationship between the derived index components and the outcome changes at the chosen cut-point (usually where the components are equal). This is an assumption that should, ideally, be tested empirically. Sub-group regression also results in reduced statistical power through diminished sample sizes and cannot resolve the problem of implicit coefficient weights. Fortunately, @edwards1995 introduced an approach using multivariate regression that addresses these latter two issues. This approach will be discussed in a following paragraph.
+Another potential solution to the directionality problem is to leave variables continuous, but run analyses separately for derived index-defined groups (e.g., "overestimators" and "underestimators"). As discussed earlier, in the section introducing the directionality problem, this approach assumes that the relationship between the derived index components and the outcome changes at the chosen cut-point (usually where the components are equal). This is an assumption that should, ideally, be tested empirically. Sub-group regression also results in reduced statistical power through diminished sample sizes and cannot resolve the problem of implicit coefficient weights.
 
 ## Latent difference score modelling
 
@@ -1189,18 +1189,18 @@ Approaches based in structural equation modelling have been introduced as altern
 
 ## The additive model and condition-based regression analysis
 
-The additive model, composed of a regression with sTST and oTST as separate linear predictors, was demonstrated in a previous example and provided more information than the accompanying difference score regression. If a researcher is interested in measuring a relationship of discrepancy to an outcome that is linear across all levels of self-report and objective sleep (i.e., a directed difference) then this approach may be useful. Support for a discrepancy hypothesis could be provided by observing statistically significant unique contributions of each sleep measure that are opposite in sign. As a test of directed difference, however, this approach would not be appropriate for a hypothesis where the effect of discrepancy changes at any value of the predictors. @humberg2018 devised a formal method for assessing coefficients in the additive model for adherence to the coefficient pattern consistent with directed discrepancy described above. This procedure, called condition-based regression analysis, is simple in approach, and has the advantage of combining coefficient tests into a single hypothesis test. Where discrepancy is intended as an outcome composed of dependent, rather than independent variables, 
+The additive model, composed of a regression with sTST and oTST as separate linear predictors, was demonstrated in a previous example and provided more information than the accompanying difference score regression. If a researcher is interested in measuring a relationship of discrepancy to an outcome that is linear across all levels of self-report and objective sleep (i.e., a directional difference) then this approach may be useful. Support for a discrepancy hypothesis could be provided by observing statistically significant unique contributions of each sleep measure that are opposite in sign. As a test of directional difference, however, this approach would not be appropriate for a hypothesis where the effect of discrepancy changes at any value of the predictors. @humberg2018 devised a formal method for assessing coefficients in the additive model for adherence to the coefficient pattern consistent with directional discrepancy described above. This procedure, called condition-based regression analysis, is simple in approach, and has the advantage of combining coefficient tests into a single hypothesis test.
 
 ## Spline regression
 
-Spline regression, introduced to the testing of discrepancy by @edwards2018, is an approach to investigating non-directed difference that overcomes problems associated with the use of of absolute difference scores. Similar to the piecewise approach demonstrated in a previous section, empirically-estimated points that allow changes in slopes provide the complexity required to represent a discrepancy effect. Spline regression treats the components of an absolute difference score as separate predictors of an outcome, expanding the model to three dimensions. Therefore, rather than breakpoints, spline regression estimates *seams* along a regression surface where slopes may change. The general equation for a spline regression with a single seam is [@edwards2018]:
+Spline regression, introduced to the testing of discrepancy by @edwards2018, is an approach to investigating non-directional difference that overcomes problems associated with the use of of absolute difference scores. Similar to the piecewise approach demonstrated in a previous section, empirically-estimated points that allow changes in slopes provide the complexity required to represent a discrepancy effect. Spline regression treats the components of an absolute difference score as separate predictors of an outcome, expanding the model to three dimensions. Therefore, rather than breakpoints, spline regression estimates *seams* along a regression surface where slopes may change. The general equation for a spline regression with a single seam is [@edwards2018]:
 
 \begin{equation}
 Z = b_{0} + b_{1}X + b_{2}Y + b_{3}(Y - c_{0} - c_{1}X)(Y < c_{0} + c_{1}X) + \epsilon
 (\#eq:spline)
 \end{equation}
 
-where $Y < c_{0} + c_{1}X$ is a logical expression allowing the slopes of the surface to change depending on the region demarcated by the seam defined by $Y = c_{0} + c_{1}X$. Support for a non-directed discrepancy hypothesis is provided by a seam that lies along the X = Y line, corresponding to exactly equal predictor combinations. 
+where $Y < c_{0} + c_{1}X$ is a logical expression allowing the slopes of the surface to change depending on the region demarcated by the seam defined by $Y = c_{0} + c_{1}X$. Support for a non-directional discrepancy hypothesis is provided by a seam that lies along the X = Y line, corresponding to exactly equal predictor combinations. 
 
 As a less constrained form of the absolute difference score model, spline regression can test the constraints on coefficient weights imposed by these difference scores empirically and allows for surfaces that are asymmetrical (i.e., having differing slopes) about the seam. Adding to this flexibility is the potential for estimating multiple seams from which flat zones can be estimated where the predicted values of the outcome remain constant. 
 
@@ -1215,14 +1215,14 @@ To date, there appears to be no use of this procedure outside of the demonstrati
 
 ## Polynomial regression with response surface analysis
 
-Polynomial regression with response surface analysis [@edwards2002; @humberg2019] is an approach that allows for the testing of non-directed difference that overcomes problems with derived indices described in the preceding sections. In this approach, components of a derived index are entered as separate predictors in a polynomial model with their squared terms and an interaction.
+Polynomial regression with response surface analysis [@edwards2002; @humberg2019] is an approach that allows for the testing of non-directional difference that overcomes problems with derived indices described in the preceding sections. In this approach, components of a derived index are entered as separate predictors in a polynomial model with their squared terms and an interaction.
 
 \begin{equation}
 Z = b_{0} + b_{1}X + b_{2}Y + b_{3}X^{2} + b_{4}XY + b_{5}Y^{2}
 (\#eq:rsa)
 \end{equation}
 
-Predicted values of Z form a complex shape in 3-dimensional space (i.e., a response surface) that can be tested at key points to provide support for a discrepancy effect. Where spline regression uses estimated breakpoints or seams to provide the complexity required for testing discrepancy, response surface analysis uses higher order terms. As such, the latter approach makes an assumption of differentiability or "smoothness" about the point where an outcome is maximised or minimised. The polynomial model in equation \@ref(eq:rsa) can be seen as a less constrained version of that implied by the squared difference score--a derived index unused as an operational measure of sleep discrepancy but employed for other constructs in a similar way as absolute difference scores^[Both absolute and squared difference scores are attempts to capture congruence or discrepancy, regardless of its direction*********************************************].
+Predicted values of Z form a complex shape in 3-dimensional space (i.e., a response surface) that can be tested at key points to provide support for a discrepancy effect. Where spline regression uses estimated breakpoints or seams to provide the complexity required for testing discrepancy, response surface analysis uses higher order terms. As such, the latter approach makes an assumption of differentiability or "smoothness" about the point where an outcome is maximised or minimised. The polynomial model in equation \@ref(eq:rsa) can be seen as a less constrained version of that implied by the squared difference score--a derived index unused as an operational measure of sleep discrepancy but employed for other constructs in a similar way as absolute difference scores.
 
 \begin{equation}
 Z = b_{0} + b_{1}(X - Y)^{2}
@@ -1256,7 +1256,7 @@ Defining relationships of discrepancy in sleep time parameters with other variab
 
 ## Conclusion
 
-There are significant conceptual and methodological problems associated with the use of derived indices including difference, ratio, and combination scores, in sleep discrepancy research. Sophisticated statistical alternatives are needed to define relationships of sleep time parameters with other outcomes. For simple discrepancy hypotheses, where the effects of the predictors are not expected to change throughout their range (i.e., directed difference), @humberg2018's condition-based regression or latent difference score modelling should be used. For more complex discrepancy hypotheses, where the effect of discrepancy is represented by the minimisation or maximisation of an outcome across a region defined by the predictors (i.e., non-directed difference), spline regression or response surface analysis should be used. See Figure \@ref(fig:flowcharta) for an algorithmic depiction of derived index alternatives. For all studies investigating discrepancy, verbal hypotheses should specify the nature of the expected relationship as the term "discrepancy" does not, in itself, represent sufficient information to make meaningful testable predictions. Adoption of the alternatives described will not only vastly improve methodology in sleep discrepancy but allow stronger scientific inferences to be made.
+There are significant conceptual and methodological problems associated with the use of derived indices including difference, ratio, and combination scores, in sleep discrepancy research. Sophisticated statistical alternatives are needed to define relationships of sleep time parameters with other outcomes. For simple discrepancy hypotheses, where the effects of the predictors are not expected to change throughout their range (i.e., directional difference), @humberg2018's condition-based regression or latent difference score modelling should be used. For more complex discrepancy hypotheses, where the effect of discrepancy is represented by the minimisation or maximisation of an outcome across a region defined by the predictors (i.e., non-directional difference), spline regression or response surface analysis should be used. See Figure \@ref(fig:flowcharta) for an algorithmic depiction of derived index alternatives. For all studies investigating discrepancy, verbal hypotheses should specify the nature of the expected relationship as the term "discrepancy" does not, in itself, represent sufficient information to make meaningful testable predictions. Adoption of the alternatives described will not only vastly improve methodology in sleep discrepancy but allow stronger scientific inferences to be made.
 
 <!-- The severity of a statistical test  -->
 
@@ -1276,7 +1276,7 @@ node[shape = square, fontsize = 14]
 edge[fontsize = 14]
 
       DepIndep [label = 'Discrepancy as independent \n or dependent variable?']
-      Linear [label = 'Directed / non-directed difference']
+      Linear [label = 'Directional / non-directional difference']
       Weights [label = 'Specified coefficient \n weights?']
       Symmetric [label = 'Symmetric effect?']
       Constrained [label = 'Multiple regression \n testing constraints \n (Edwards 1994)', fontcolor = blue]
@@ -1291,8 +1291,8 @@ edge[fontsize = 14]
 
 DepIndep -> Linear [label = 'IV']
 DepIndep -> Multivariate [label = 'DV']
-Linear -> Weights [label = 'Directed difference']
-Linear -> Curvilinear [label = 'Non-directed difference']
+Linear -> Weights [label = 'Directional difference']
+Linear -> Curvilinear [label = 'Non-directional difference']
 Curvilinear -> Symmetric [label = 'Yes (Curvilinear)']
 Curvilinear -> Spline [label = 'No (Linear)']
 
